@@ -1,6 +1,4 @@
 
-
-
     #maincontainer {
 
         background-color: lightblue;
@@ -23,10 +21,12 @@
 
     .texto {
 
-        font-size: 6em;
+        font-size: 3em;
     }
 
     #starcol {
 
         background-color: crimson;
     }
+
+
