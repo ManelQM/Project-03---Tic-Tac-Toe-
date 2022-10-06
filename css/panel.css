@@ -1,0 +1,24 @@
+
+#generalcontainerpanel {
+    background-color: lightseagreen;
+    height: 100vh;
+}
+
+#rowpanelup {
+    background-color: lightgoldenrodyellow;
+    height: 20vh;
+    margin-left: 0em;
+}
+
+#rowpanelmid {
+    background-color: lawngreen;
+    height: 60vh;
+    margin-left: 0em;
+}
+
+#rowpaneldown {
+
+    background-color: lightblue;
+    height: 20vh;
+    margin-left: 0em;
+}
