@@ -11,5 +11,22 @@
     #welcomerow {
 
         background-color: lightgreen;
+
+    }
+
+    #welcomecol {
+
+        background-color: lightcoral;
+        font-family:monospace;
         
+    }
+
+    .texto {
+
+        font-size: 6em;
+    }
+
+    #starcol {
+
+        background-color: crimson;
     }
