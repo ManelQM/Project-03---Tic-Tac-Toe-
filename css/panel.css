@@ -8,6 +8,14 @@
     background-color: lightgoldenrodyellow;
     height: 20vh;
     margin-left: 0em;
+    
+}
+
+#player1box {
+
+    background-color: gold;
+    height: 20vh;
+    border: 1px solid;
 }
 
 #containerpanelmid {
@@ -19,9 +27,15 @@
 #gamepanel {
     background-color: lightcoral;
     height: 60vh;
-    width: 50vw;
+    width: 70vw;
 }
 
+#lines {
+
+    height: 20vh;
+    background-color: aqua;
+    border: 1px solid;
+}
 
 #rowpaneldown {
 
