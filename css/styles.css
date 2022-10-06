@@ -1,32 +1,35 @@
 
     #maincontainer {
 
-        background-color: lightblue;
+        background-color: black;
         height: 100vh;
 
     }
 
     #welcomerow {
 
-        background-color: lightgreen;
+        background-color: black;
 
     }
 
     #welcomecol {
 
-        background-color: lightcoral;
-        font-family:monospace;
+        background-color: black
+    
         
     }
 
     .texto {
 
         font-size: 3em;
+        font-family: 'Retro New Version', sans-serif;
+        color: crimson;
+        margin-top: 1em;
+
     }
 
-    #starcol {
+ #startbutton {
 
-        background-color: crimson;
-    }
-
-
+    font-family: 'Retro New Version', sans-serif;
+    color: crimson;
+ }
