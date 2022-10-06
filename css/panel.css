@@ -10,11 +10,18 @@
     margin-left: 0em;
 }
 
-#rowpanelmid {
+#containerpanelmid {
     background-color: lawngreen;
     height: 60vh;
     margin-left: 0em;
 }
+
+#gamepanel {
+    background-color: lightcoral;
+    height: 60vh;
+    width: 50vw;
+}
+
 
 #rowpaneldown {
 
