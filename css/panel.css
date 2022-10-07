@@ -16,6 +16,18 @@
     background-color: gold;
     height: 20vh;
     border: 1px solid;
+    margin: 0;
+}
+
+.player1status {
+
+    height: 6.66vh;
+    border: 1px solid;
+    
+}
+.col-6 {
+    height: 6.66vh;
+    border:1px solid;
 }
 
 #containerpanelmid {
