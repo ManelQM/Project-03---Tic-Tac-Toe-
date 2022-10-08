@@ -23,7 +23,6 @@ const leerTablero = () => {
 
 };
 
-leerTablero();
 
 const checkVictoria = () => {
 
@@ -36,6 +35,7 @@ const turntime = () => {
 
 }
 
+leerTablero();
 
 
 
