@@ -1,6 +1,8 @@
 let tablero = [["X","X","X"],["X","X","X"],["O","","X"]];
 let turno = 0; 
 
+
+//Declaración tablero
 const leerTablero = () => {
     for(let x = 0; x < tablero.length; x++){
 
