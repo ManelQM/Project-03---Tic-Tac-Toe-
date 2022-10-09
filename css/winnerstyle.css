@@ -1,0 +1,36 @@
+
+    #maincontainer {
+
+        background-color: black;
+        height: 100vh;
+
+    }
+
+    #welcomerow {
+
+        background-color: black;
+
+    }
+
+    #welcomecol {
+
+        background-color: black
+    
+        
+    }
+
+    .texto {
+
+        font-size: 8em;
+        font-family: 'Roschild', sans-serif;
+        color:white;
+        margin-top: 1em;
+
+    }
+
+ #startbutton {
+
+    font-family: 'Retro New Version', sans-serif;
+    color: white;
+    font-family: 'Roschild', sans-serif;
+ }
