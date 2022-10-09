@@ -9,7 +9,13 @@
 #selectplayerrow {
     
     background-color: lightcyan;
-    height: 60vh;
-    width: 60vw;
+    height: 80vh;
+    width: 90vw;
    
+}
+
+#selectplayercol{
+    height: 60vh;
+    background-color:lightblue;
+    border: 1px solid;
 }
