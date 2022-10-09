@@ -1,0 +1,15 @@
+
+
+#selectplayercontainer {
+
+    background-color: aqua;
+    height: 100vh;
+    
+}
+#selectplayerrow {
+    
+    background-color: lightcyan;
+    height: 60vh;
+    width: 60vw;
+   
+}
