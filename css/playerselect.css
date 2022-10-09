@@ -2,20 +2,31 @@
 
 #selectplayercontainer {
 
-    background-color: aqua;
+    background-color: khaki;
     height: 100vh;
     
 }
 #selectplayerrow {
     
-    background-color: lightcyan;
+    background-color:black;
     height: 80vh;
     width: 90vw;
    
 }
 
 #selectplayercol{
-    height: 60vh;
-    background-color:lightblue;
-    border: 1px solid;
+    height: 20vh;
+    background-color:black;
+    color: wheat;
+}
+
+.text {
+
+    font-family: 'Roschild', sans-serif;
+}
+
+.textchoose {
+
+    font-family: 'Roschild', sans-serif;
+    font-size: 1em;
 }
