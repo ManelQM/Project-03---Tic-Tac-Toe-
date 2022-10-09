@@ -45,8 +45,11 @@
 }
 
 #lines {
-    background-color: white;
+    background-color: black;
     border: 1px solid;
+    border-style:ridge;
+    color: wheat;
+    text-align: center;    
 }
 
 #rowpaneldown {
