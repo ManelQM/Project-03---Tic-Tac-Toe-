@@ -13,18 +13,26 @@
 
 #player1box {
 
-    background-color: gold;
+    background-color:black;
     height: 20vh;
     border: 1px solid;
     margin: 0;
 }
 
-.player1status {
+.list-group-item {
 
-    height: 6.66vh;
-    border: 1px solid;
-    
+    height: 5vh;
+    width: 15vw;
+    text-align: center;
+    color: white;
+    background-color: black;
+    font-size: 1em;
+        font-family: 'Retro New Version', sans-serif;
+        color: crimson;
+        margin: auto;
+
 }
+
 .col-6 {
     height: 6.66vh;
     border:1px solid;
@@ -45,7 +53,7 @@
 #lines {
 
     height: 20vh;
-    background-color: aqua;
+    background-color: white;
     border: 1px solid;
 }
 
