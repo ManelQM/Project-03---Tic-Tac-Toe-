@@ -1,34 +1,35 @@
 let tablero = [["X","X",""],["","",""],["","X",""]];
 
-let turno = 0; 
+let turnplayer1 = 0; 
+let turnplayer2 = 0;
 
+/* Declaración tablero*/
 
-//Declaración tablero
-// const leerTablero = () => {
-//     for(let x = 0; x < tablero.length; x++){
+const leerTablero = () => {
+    for(let x = 0; x < tablero.length; x++){
 
-//         for(let i = 0; i < tablero.length; i++){
+        for(let i = 0; i < tablero.length; i++){
             
-//             if(tablero[x][i] == "X"){
+            if(tablero[x][i] == "X"){
              
-//                 console.log(`estoy en X = `, x, " y en Y = ", i, " aqui hay una X");
-//             }else if (tablero[x][i] == "O") { 
-//                 console.log (`estoy en X = `, x, " y en Y = ", i, " aqui hay una O")
+                console.log(`estoy en X = `, x, " y en Y = ", i, " aqui hay una X");
+            }else if (tablero[x][i] == "O") { 
+                console.log (`estoy en X = `, x, " y en Y = ", i, " aqui hay una O")
             
-//             }else{
+            }else{
     
-//                 console.log (`estoy en X = `, x, " y en Y = ", i, " aqui no hay nada")
-//             }
+                console.log (`estoy en X = `, x, " y en Y = ", i, " aqui no hay nada")
+            }
     
-//         }
+        }
     
-//     }
+    }
 
-// };
+};
 
-// leerTablero();
+leerTablero();
 
-//función ganador
+/*función ganador*/
 
 const checkwinner = () => {
     //horizontales
@@ -46,15 +47,19 @@ const checkwinner = () => {
     }else if (tablero[2][0] == tablero[2][1] && tablero[2][2]) {
         alert ('has ganado')
     //diagonales    
-    }else if ( tablero[0][0] == tablero[1][1] &tablero[2][2]){
+    }else if ( tablero[0][0] == tablero[1][1] &&tablero[2][2]){
         alert ('has ganado')
-    }else if (tablero [2][0] == tablero[1][1] & tablero[0][2]){
+    }else if (tablero [2][0] == tablero[1][1] && tablero[0][2]){
         alert ('has ganado')
     }
 };
 
 const turntime = () => {
 
+    if ((turnplayer1 == true) && (turnplayer2 == false)) {
+
+
+    }
 
 }
 
