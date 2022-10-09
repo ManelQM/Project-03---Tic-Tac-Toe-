@@ -3,6 +3,7 @@
 
         background-color: black;
         height: 100vh;
+        width: 100vw;
 
     }
 
@@ -21,7 +22,7 @@
 
     .texto {
 
-        font-size: 8em;
+        font-size: 3em;
         font-family: 'Roschild', sans-serif;
         color:white;
         margin-top: 1em;
@@ -31,6 +32,6 @@
  #startbutton {
 
     font-family: 'Retro New Version', sans-serif;
-    color: white;
+    color: wheat;
     font-family: 'Roschild', sans-serif;
  }
