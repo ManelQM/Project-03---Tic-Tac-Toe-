@@ -1,11 +1,11 @@
 
 #generalcontainerpanel {
-    background-color: lightseagreen;
+    background-color: black;
     height: 100vh;
 }
 
 #rowpanelup {
-    background-color: lightgoldenrodyellow;
+    background-color: black;
     height: 20vh;
     margin-left: 0em;
     
@@ -15,7 +15,7 @@
 
     background-color:black;
     height: 20vh;
-    border: 1px solid;
+
     margin: 0;
 }
 
@@ -27,9 +27,9 @@
     color: white;
     background-color: black;
     font-size: 1em;
-        font-family: 'Retro New Version', sans-serif;
-        color: crimson;
-        margin: auto;
+    font-family: 'Roschild', sans-serif;
+                                                
+       
 
 }
 
@@ -39,27 +39,26 @@
 }
 
 #containerpanelmid {
-    background-color: lawngreen;
+    background-color: black;
     height: 60vh;
     margin-left: 0em;
 }
 
 #gamepanel {
-    background-color: lightcoral;
+    background-color: black;
     height: 60vh;
     width: 70vw;
 }
 
 #lines {
 
-    height: 20vh;
     background-color: white;
     border: 1px solid;
 }
 
 #rowpaneldown {
 
-    background-color: lightblue;
+    background-color: black;
     height: 20vh;
     margin-left: 0em;
 }
