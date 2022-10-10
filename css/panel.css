@@ -10,7 +10,7 @@
     margin-left: 0em;    
 }
 
-#player1box {
+.boxplayer {
     background-color:black;
     height: 20vh;
     margin: 0;
@@ -44,7 +44,7 @@
     width: 70vw;
 }
 
-#lines {
+.boxgame {
     background-color: black;
     border: 1px solid;
     border-style:ridge;
