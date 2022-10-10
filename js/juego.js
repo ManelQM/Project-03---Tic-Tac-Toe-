@@ -5,29 +5,29 @@ let turnplayer2 = false;
 
 /* Declaración tablero*/
 
-// const leerTablero = () => {
-//     for(let x = 0; x < tablero.length; x++){
+const leerTablero = () => {
+    for(let x = 0; x < tablero.length; x++){
 
-//         for(let i = 0; i < tablero.length; i++){
+        for(let i = 0; i < tablero.length; i++){
             
-//             if(tablero[x][i] == "X"){
+            if(tablero[x][i] == "X"){
              
-//                 console.log(`estoy en X = `, x, " y en Y = ", i, " aqui hay una X");
-//             }else if (tablero[x][i] == "O") { 
-//                 console.log (`estoy en X = `, x, " y en Y = ", i, " aqui hay una O")
+                console.log(`estoy en X = `, x, " y en Y = ", i, " aqui hay una X");
+            }else if (tablero[x][i] == "O") { 
+                console.log (`estoy en X = `, x, " y en Y = ", i, " aqui hay una O")
             
-//             }else{
+            }else{
     
-//                 console.log (`estoy en X = `, x, " y en Y = ", i, " aqui no hay nada")
-//             }
+                console.log (`estoy en X = `, x, " y en Y = ", i, " aqui no hay nada")
+            }
     
-//         }
+        }
     
-//     }
+    }
+  
+};
 
-// };
-
-// leerTablero();
+leerTablero();
 
 /*función ganador*/
 
@@ -56,11 +56,11 @@ const checkwinner = () => {
 
 const turntime = () => {
 
-    if (turnplayer1 == true && turnplayer2 == false) {
+    if (turnplayer1 == true ) {
         alert ('turno player1');
         turnplayer1 = false;
         turnplayer2 = true;  
-    }else if (turnplayer1 == false && turnplayer2 ==true) {
+    }else if (turnplayer1 == true) {
         alert ('turno player2'); 
         turnplayer1=true;
         turnplayer2=false; 
