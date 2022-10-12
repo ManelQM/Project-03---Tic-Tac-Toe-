@@ -24,22 +24,46 @@ boxes.map((box)=> {                      // Mapeo casilla - al ser un array reco
         if(box.innerHTML == ""){            // En dicho condicional se pondera que si el elemento casilla html está vacío 
             box.innerHTML = (interruptor) ? "X" : "O"; // se puede poner ficha. 
             interruptor = !interruptor; // Condición para que se produzca el switch entre jugadores 
-            index++;
         };
     });
 });
 
 const leerTablero = () => {
-    for(let x = 0; x < tablero.length; x++){
+    for(let x = 0; x < boxes.length; x++){
 
-        for(let i = 0; i < tablero.length; i++){} // leer tablero llamará a checkwinner
-
+        for(let i = 0; i < boxes.length; i++){
+           
+            
+                } 
     }
 }    
+
+
+
+
 const checkwinner = () => {
-    let casilla = casillas;
-    casilla.forEach( cas => console.log (cas)); 
-}
+    //horizontales
+    if (boxes[0][0] == boxes[1][0] && boxes [2][0]) {
+        alert ('has ganado'); 
+    }else if (boxes [0][1] == boxes[1][1] && boxes [2][1]){
+        alert ('has ganado');
+    }else if (boxes [0][2] == boxes [1][2] && boxes [2][2]) {
+        alert ('has ganado');
+    // verticales
+    }else if (boxes [0][0] == boxes [0][1] && boxes[0][2]) {
+        alert ('has ganado')
+    }else if (boxes [1][0] == boxes[1][1] && boxes[1][2]) {
+        alert ('has ganado')
+    }else if (boxes[2][0] == boxes[2][1] && boxes[2][2]) {
+        alert ('has ganado')
+    //diagonales    
+    }else if ( boxes[0][0] == boxes[1][1] &&boxes[2][2]){
+        alert ('has ganado')
+    }else if (boxes [2][0] == boxes[1][1] && boxes[0][2]){
+        alert ('has ganado')
+    }
+};
+
 
 tiles.onclick = () => {
     document.getElementById 
