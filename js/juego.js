@@ -1,7 +1,18 @@
-let tablero = [["X","X",""],["","",""],["","X",""]];
+let tablero = [["","",""],["","",""],["","",""]];
+let boxes = Array.from(document.getElementsByClassName("activebox"));
+let interruptor = true;
+// let turnplayer1 = true; 
+// let turnplayer2 = false;
 
-let turnplayer1 = true; 
-let turnplayer2 = false;
+
+boxes.map((box)=> {                      // Mapeo casilla - al ser un array recorre cada uno de los elementos
+    box.addEventListener("click",()=>{     // Función flecha que al efectuarse un click se ejecuta un condicional. 
+        if(box.innerHTML == ""){            // En dicho condicional se pondera que si el elemento casilla html está vacío 
+            box.innerHTML = (interruptor) ? "X" : "O"; // se puede poner ficha. 
+            interruptor = !interruptor; // Condición para que se produzca el switch entre jugadores 
+        };     
+    });
+});
 
 /* Declaración tablero*/
 
@@ -10,16 +21,16 @@ const leerTablero = () => {
 
         for(let i = 0; i < tablero.length; i++){
             
-            if(tablero[x][i] == "X"){
+            // if(tablero[x][i] == "X"){
              
-                console.log(`estoy en X = `, x, " y en Y = ", i, " aqui hay una X");
-            }else if (tablero[x][i] == "O") { 
-                console.log (`estoy en X = `, x, " y en Y = ", i, " aqui hay una O")
+            //     console.log(`estoy en X = `, x, " y en Y = ", i, " aqui hay una X");
+            // }else if (tablero[x][i] == "O") { 
+            //     console.log (`estoy en X = `, x, " y en Y = ", i, " aqui hay una O")
             
-            }else{
+            // }else{
     
-                console.log (`estoy en X = `, x, " y en Y = ", i, " aqui no hay nada")
-            }
+            //     console.log (`estoy en X = `, x, " y en Y = ", i, " aqui no hay nada")
+            // }
     
         }
     
@@ -54,19 +65,19 @@ const checkwinner = () => {
     }
 };
 
-const turntime = () => {
+// const turntime = () => {
 
-    if (turnplayer1 == true ) {
-        alert ('turno player1');
-        turnplayer1 = false;
-        turnplayer2 = true;  
-    }else if (turnplayer1 == true) {
-        alert ('turno player2'); 
-        turnplayer1=true;
-        turnplayer2=false; 
-    }
+//     if (turnplayer1 == true ) {
+//         alert ('turno player1');
+//         turnplayer1 = false;
+//         turnplayer2 = true;  
+//     }else if (turnplayer1 == true) {
+//         alert ('turno player2'); 
+//         turnplayer1=true;
+//         turnplayer2=false; 
+//     }
 
-    }
+//     }
 
 
 
