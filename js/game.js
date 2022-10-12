@@ -1,7 +1,8 @@
 
-
+let casillas = Array.from(document.getElementsByClassName("activebox"));
 // let player1 = new Player;
 // let player2 = new Player;
+let interruptor = true;
 
 
 //CLASS PLAYER 
@@ -17,28 +18,32 @@ class Player {
     }
 
 };
-let casillas = Array.from(document.getElementsByClassName("activebox"));
 
-//Hemos usado map porque nos permite tratar a cada elemento 
-//del array casillas como un objeto (propiedades + metodos);
 
-let interruptor = true;
 
-casillas.map((casilla, index)=> {
-    casilla.addEventListener("click",()=>{
-        if(casilla.innerHTML == ""){
-            casilla.innerHTML = (interruptor) ? "X" : "O";
-            interruptor = !interruptor;
+
+
+casillas.map((casilla)=> {                      // Mapeo casilla - al ser un array recorre cada uno de los elementos
+    casilla.addEventListener("click",()=>{      // Función flecha que al efectuarse un click se ejecuta un condicional. 
+        if(casilla.innerHTML == ""){            // En dicho condicional se pondera que si el elemento casilla html está vacío 
+            casilla.innerHTML = (interruptor) ? "X" : "O"; // se puede poner ficha. 
+            interruptor = !interruptor; // Condición para que se produzca el switch entre jugadores 
             index++;
-            //Comprobamos en otra funcion si hay un ganador.......
         };
     });
 });
 
 
+const checkwinner = () => {
+    let casilla = casillas;
+    casilla.forEach( cas => console.log (cas)); 
+}
 
 
 
 
+lines.onclick = () => {
+    document.getElementById 
 
+}
 

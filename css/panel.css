@@ -39,7 +39,7 @@
 }
 
 #gamepanel {
-    background-color: white;
+    background-color: crimson;
     height: 60vh;
     width: 70vw;
 }
@@ -50,7 +50,9 @@
     border-style:ridge;
     color: wheat;
     text-align: center;    
+    border-radius: 20%;
 }
+
 
 #rowpaneldown {
     background-color: black;
