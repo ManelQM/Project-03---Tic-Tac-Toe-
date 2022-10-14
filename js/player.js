@@ -16,7 +16,27 @@ class Player {
 
 };
 
-let player1 = new Player("Schopenhauer","human");
-let player2 = new Player("Trantor","cpu");
 
-console.log (player1);
+let player1InputName = document.getElementById("inputNombre1");
+
+let player2InputName = document.getElementById("inputNombre2");
+
+
+
+const jugadoresElegidos = () => {
+
+
+    console.log(player1InputName.value);
+    console.log(player2InputName.value);
+
+    let player1 = new Player(player1InputName.value,"human");
+    let player2 = new Player(player2InputName.value,"cpu");
+
+    sessionStorage.setItem("dataPlayer1",JSON.stringify(player1));
+    sessionStorage.setItem("dataPlayer2",JSON.stringify(player2));
+
+    window.open("../pages/panel.html","_self");
+};
+
+
+

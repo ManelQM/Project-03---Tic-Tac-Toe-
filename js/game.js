@@ -11,7 +11,7 @@ let winnerCombos = [
     [0, 4, 8],
     [2, 4, 6]
 ];
-
+  
 gamearena.map((gametile)=> {                      
 gametile.addEventListener("click",()=>{      
 if(gametile.innerHTML == ""){           
@@ -45,6 +45,10 @@ const playerturn = () => {
 
 } 
 
+const numberofcredits = () => {
+
+
+}
 
 
 
