@@ -1,12 +1,12 @@
 
-let datosJugador1 = JSON.parse(sessionStorage.getItem("dataPlayer1"));
-let datosJugador2 = JSON.parse(sessionStorage.getItem("dataPlayer2"));
+let playerData1 = JSON.parse(sessionStorage.getItem("dataPlayer1"));
+let playerData2 = JSON.parse(sessionStorage.getItem("dataPlayer2"));
 
-let nombrePantalla1 = document.getElementById("titan1");
-let nombrePantalla2 = document.getElementById("titan2");
+let nameScreen1 = document.getElementById("titan1");
+let nameScreen2 = document.getElementById("titan2");
 
-let datos1 = JSON.parse(sessionStorage.getItem("dataPlayer1"));
-let datos2 = JSON.parse(sessionStorage.getItem("dataPlayer2"));
+let data1 = JSON.parse(sessionStorage.getItem("dataPlayer1"));
+let data2 = JSON.parse(sessionStorage.getItem("dataPlayer2"));
 
 let tipoPantalla1 = document.getElementById("tipoTitan1");
 let tipoPantalla2 = document.getElementById("tipoTitan2");
@@ -14,13 +14,13 @@ let tipoPantalla2 = document.getElementById("tipoTitan2");
 let turnoPantalla1 = document.getElementById("turnoTitan1");
 let turnoPantalla2 = document.getElementById("turnoTitan2");
 
-nombrePantalla1.innerHTML = `Player1 : ${datos1.nombre}`;
-nombrePantalla2.innerHTML = `Player2 : ${datos2.nombre}`;
+nameScreen1.innerHTML = `Player1 : ${data1.nombre}`;
+nameScreen2.innerHTML = `Player2 : ${data2.nombre}`;
 
-tipoPantalla1.innerHTML = `Player1 : ${datos1.tipo}`;
-tipoPantalla2.innerHTML = `Player2 : ${datos2.tipo}`;
+tipoPantalla1.innerHTML = `Player1 : ${data1.tipo}`;
+tipoPantalla2.innerHTML = `Player2 : ${data2.tipo}`;
 
-var tablero = ["", "", "", "", "", "", "", "", ""];
+var board = ["", "", "", "", "", "", "", "", ""];
 
 let boxes = Array.from(document.getElementsByClassName("activebox"));
 
@@ -47,7 +47,7 @@ boxes.map((box) => {
     if ((box.innerHTML == "") && (turno1 > 0) || (turno2 > 0)) {
       box.innerHTML = interruptor ? "X" : "O";
 
-      tablero[box.id] = interruptor ? "X" : "O";
+      board[box.id] = interruptor ? "X" : "O";
 
       if(interruptor){
 
@@ -99,7 +99,7 @@ const checkWinner = (simbolo) => {
     ) {
 
 
-      if (tablero[winnerCombos[numerador][iterador]] == simbolo) {
+      if (board[winnerCombos[numerador][iterador]] == simbolo) {
         contador++;
 
         if (contador == 3) {
