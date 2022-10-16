@@ -51,12 +51,12 @@ boxes.map((box) => {
 
       if(interruptor){
 
-       
         turn1--;
-      }else{
 
-   
+      }else{
+        
         turn2--;
+
       }
 
       console.log(turn1, turn2);
