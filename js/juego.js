@@ -2,17 +2,17 @@
 let playerData1 = JSON.parse(sessionStorage.getItem("dataPlayer1"));
 let playerData2 = JSON.parse(sessionStorage.getItem("dataPlayer2"));
 
-let nameScreen1 = document.getElementById("titan1");
-let nameScreen2 = document.getElementById("titan2");
+let nameScreen1 = document.getElementById("p1");
+let nameScreen2 = document.getElementById("p2");
 
 let data1 = JSON.parse(sessionStorage.getItem("dataPlayer1"));
 let data2 = JSON.parse(sessionStorage.getItem("dataPlayer2"));
 
-let typeScreen1 = document.getElementById("tipoTitan1");
-let typeScreen2 = document.getElementById("tipoTitan2");
+let typeScreen1 = document.getElementById("typeP1");
+let typeScreen2 = document.getElementById("typeP2");
 
-let turnScreen1 = document.getElementById("turnoTitan1");
-let turnScreen2 = document.getElementById("turnoTitan2");
+let turnScreen1 = document.getElementById("turnP1");
+let turnScreen2 = document.getElementById("turnP2");
 
 nameScreen1.innerHTML = `Player1 : ${data1.nombre}`;
 nameScreen2.innerHTML = `Player2 : ${data2.nombre}`;
@@ -24,8 +24,8 @@ var board = ["", "", "", "", "", "", "", "", ""];
 
 let boxes = Array.from(document.getElementsByClassName("activebox"));
 
-var turno1 = 100;
-var turno2 = 100;
+var turn1 = 100;
+var turn2 = 100;
 
 let interruptor = true;
 
@@ -44,7 +44,7 @@ let winnerCombos = [
 
 boxes.map((box) => {
   box.addEventListener("click", () => {
-    if ((box.innerHTML == "") && (turno1 > 0) || (turno2 > 0)) {
+    if ((box.innerHTML == "") && (turn1 > 0) || (turn2 > 0)) {
       box.innerHTML = interruptor ? "X" : "O";
 
       board[box.id] = interruptor ? "X" : "O";
@@ -52,16 +52,16 @@ boxes.map((box) => {
       if(interruptor){
 
        
-        turno1--;
+        turn1--;
       }else{
 
    
-        turno2--;
+        turn2--;
       }
 
-      console.log(turno1, turno2);
+      console.log(turn1, turn2);
 
-      checkWinTurnos();
+      checkWinTurn();
 
 
       interruptor = !interruptor;
@@ -77,7 +77,7 @@ boxes.map((box) => {
   });
 });
 
-const checkWinTurnos = () => {
+const checkWinTurn= () => {
   if (interruptor == true) {
     checkWinner("X");
   } else {
@@ -85,7 +85,7 @@ const checkWinTurnos = () => {
   }
 };
 
-const checkWinner = (simbolo) => {
+const checkWinner = (symbol) => {
   let contador = 0;
 
 
@@ -99,7 +99,7 @@ const checkWinner = (simbolo) => {
     ) {
 
 
-      if (board[winnerCombos[numerador][iterador]] == simbolo) {
+      if (board[winnerCombos[numerador][iterador]] == symbol) {
         contador++;
 
         if (contador == 3) {
@@ -115,7 +115,7 @@ const checkWinner = (simbolo) => {
 
 
 
-            let winner = (simbolo == "X") ? datosGuardados1.nombre : datosGuardados2.nombre;
+            let winner = (symbol == "X") ? datosGuardados1.nombre : datosGuardados2.nombre;
 
 
 
