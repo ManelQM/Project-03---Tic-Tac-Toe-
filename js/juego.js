@@ -59,7 +59,7 @@ boxes.map((box) => {
 
       }
 
-      console.log(turn1, turn2);
+
 
       checkWinTurn();
 
