@@ -24,8 +24,8 @@ var tablero = ["", "", "", "", "", "", "", "", ""];
 
 let boxes = Array.from(document.getElementsByClassName("activebox"));
 
-var turno1 = 3;
-var turno2 = 3;
+var turno1 = 100;
+var turno2 = 100;
 
 let interruptor = true;
 

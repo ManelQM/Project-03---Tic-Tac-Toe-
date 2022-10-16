@@ -22,6 +22,13 @@ const playertypeselect = () => {
     let player2 = new Player(inputNamePlayer2.value,"human");
 
 
+
+    sessionStorage.setItem("dataPlayer1",JSON.stringify(player1));
+    sessionStorage.setItem("dataPlayer2",JSON.stringify(player2));
+
+
+
+    window.open("../pages/panel.html","_self");
 };
 
 
