@@ -8,8 +8,8 @@ let nameScreen2 = document.getElementById("titan2");
 let data1 = JSON.parse(sessionStorage.getItem("dataPlayer1"));
 let data2 = JSON.parse(sessionStorage.getItem("dataPlayer2"));
 
-let tipoPantalla1 = document.getElementById("tipoTitan1");
-let tipoPantalla2 = document.getElementById("tipoTitan2");
+let typeScreen1 = document.getElementById("tipoTitan1");
+let typeScreen2 = document.getElementById("tipoTitan2");
 
 let turnoPantalla1 = document.getElementById("turnoTitan1");
 let turnoPantalla2 = document.getElementById("turnoTitan2");
@@ -17,8 +17,8 @@ let turnoPantalla2 = document.getElementById("turnoTitan2");
 nameScreen1.innerHTML = `Player1 : ${data1.nombre}`;
 nameScreen2.innerHTML = `Player2 : ${data2.nombre}`;
 
-tipoPantalla1.innerHTML = `Player1 : ${data1.tipo}`;
-tipoPantalla2.innerHTML = `Player2 : ${data2.tipo}`;
+typeScreen1.innerHTML = `Player1 : ${data1.tipo}`;
+typeScreen2.innerHTML = `Player2 : ${data2.tipo}`;
 
 var board = ["", "", "", "", "", "", "", "", ""];
 
