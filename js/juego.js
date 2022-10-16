@@ -1,4 +1,4 @@
-
+/*Declaracion de variables, así como de los elementos para el DOM/BOM*/
 let playerData1 = JSON.parse(sessionStorage.getItem("dataPlayer1"));
 let playerData2 = JSON.parse(sessionStorage.getItem("dataPlayer2"));
 
@@ -41,7 +41,8 @@ let winnerCombos = [
 ];
 
 
-
+/* Se realiza un mapeo de todo el tablero[] y procedemos a recoger los eventos sucedidos en el formulario 
+y a su vez por la id para poder ser usado en js. Se comprueba si esta vacía la casilla así como si alguien ha ganado*/ 
 boxes.map((box) => {
   box.addEventListener("click", () => {
     if ((box.innerHTML == "") && (turn1 > 0) || (turn2 > 0)) {
@@ -58,14 +59,10 @@ boxes.map((box) => {
         turn2--;
 
       }
-
-
-
       checkWinTurn();
-
-
+      /*switch entre los turnos*/
       interruptor = !interruptor;
-
+      /*indicadores de turno durante la partida*/
       if(!interruptor){
         turnScreen1.innerHTML = `Next turn`;
         turnScreen2.innerHTML = `Turn : O`; 
@@ -85,6 +82,7 @@ const checkWinTurn= () => {
   }
 };
 
+/* Recorrido de los dos arrays para comparar las combinaciones ganadoras*/
 const checkWinner = (symbol) => {
   let contador = 0;
 
@@ -98,12 +96,13 @@ const checkWinner = (symbol) => {
       iterador++
     ) {
 
-
+        /*Comparación de tableros*/
       if (board[winnerCombos[numerador][iterador]] == symbol) {
         contador++;
 
         if (contador == 3) {
 
+          
           setTimeout(() => {
             let datosGuardados1 = JSON.parse(
               sessionStorage.getItem("dataPlayer1")
