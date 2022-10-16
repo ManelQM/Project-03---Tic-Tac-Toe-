@@ -11,8 +11,8 @@ let data2 = JSON.parse(sessionStorage.getItem("dataPlayer2"));
 let typeScreen1 = document.getElementById("tipoTitan1");
 let typeScreen2 = document.getElementById("tipoTitan2");
 
-let turnoPantalla1 = document.getElementById("turnoTitan1");
-let turnoPantalla2 = document.getElementById("turnoTitan2");
+let turnScreen1 = document.getElementById("turnoTitan1");
+let turnScreen2 = document.getElementById("turnoTitan2");
 
 nameScreen1.innerHTML = `Player1 : ${data1.nombre}`;
 nameScreen2.innerHTML = `Player2 : ${data2.nombre}`;
@@ -67,11 +67,11 @@ boxes.map((box) => {
       interruptor = !interruptor;
 
       if(!interruptor){
-        turnoPantalla1.innerHTML = `Next turn`;
-        turnoPantalla2.innerHTML = `Turn : O`; 
+        turnScreen1.innerHTML = `Next turn`;
+        turnScreen2.innerHTML = `Turn : O`; 
       }else{
-        turnoPantalla1.innerHTML = `Turn : X`;
-        turnoPantalla2.innerHTML = `Next turn`;
+        turnScreen1.innerHTML = `Turn : X`;
+        turnScreen2.innerHTML = `Next turn`;
       }
     }
   });
