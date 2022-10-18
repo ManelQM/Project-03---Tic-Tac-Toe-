@@ -24,8 +24,8 @@ var board = ["", "", "", "", "", "", "", "", ""];
 
 let boxes = Array.from(document.getElementsByClassName("activebox"));
 
-var turn1 = 100;
-var turn2 = 100;
+var turn1 = 3;
+var turn2 = 3;
 
 let interruptor = true;
 
@@ -50,7 +50,7 @@ boxes.map((box) => {
 
       board[box.id] = interruptor ? "X" : "O";
 
-      if(interruptor){
+      if(!interruptor){
 
         turn1--;
 
@@ -58,6 +58,9 @@ boxes.map((box) => {
         
         turn2--;
 
+      }if ((turn1 == 0) && (turn2 == 0)) {
+        turn1++;
+        turn2++; 
       }
       checkWinTurn();
       /*switch entre los turnos*/

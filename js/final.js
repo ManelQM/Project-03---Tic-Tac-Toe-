@@ -1,5 +1,5 @@
 
-let mensajeVictoria = document.getElementById("victor");
+let mensajeVictoria = document.getElementById("victory");
 
 
 mensajeVictoria.innerHTML = `${sessionStorage.getItem("titan")}`;
