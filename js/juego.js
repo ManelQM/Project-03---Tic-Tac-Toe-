@@ -70,7 +70,7 @@ boxes.map((box) => {
         turnScreen1.innerHTML = `Turn : X`;
         turnScreen2.innerHTML = `Next turn`;
       }
-    }
+    }    
   });
 });
 

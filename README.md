@@ -23,7 +23,7 @@
 
 # 2. Description
 
-. The following come´s from the current GeeksHubs Bootcamp FSD students program. In this case, the student should develop the game TicTacToe using all the technologies named up. The main achieve for the student it´s to solve all the logical problems involved during the game and of course it´s rules. In addition, the project should be responsive. 
+. This project come´s from the current GeeksHubs Bootcamp FSD students program. In this case, the student should develop the game TicTacToe using all the technologies named up. The main achieve for the student it´s to solve all the logical problems involved during the game and of course the implementation of it´s rules. In addition, the project should be responsive. 
 
 # 3. User Guide
 
