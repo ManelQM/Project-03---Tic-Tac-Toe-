@@ -50,7 +50,7 @@ boxes.map((box) => {
 
       board[box.id] = interruptor ? "X" : "O";
 
-      if(!interruptor){
+      if(interruptor){
 
         turn1--;
 
@@ -89,8 +89,6 @@ const checkWinTurn= () => {
 const checkWinner = (symbol) => {
   let contador = 0;
 
-
-
   for (let numerador = 0; numerador < winnerCombos.length; numerador++) {
 
     for (
@@ -98,14 +96,12 @@ const checkWinner = (symbol) => {
       iterador < winnerCombos[numerador].length;
       iterador++
     ) {
-
         /*Comparación de tableros*/
       if (board[winnerCombos[numerador][iterador]] == symbol) {
         contador++;
 
         if (contador == 3) {
 
-          
           setTimeout(() => {
             let datosGuardados1 = JSON.parse(
               sessionStorage.getItem("dataPlayer1")
@@ -115,11 +111,7 @@ const checkWinner = (symbol) => {
               sessionStorage.getItem("dataPlayer2")
             );
 
-
-
             let winner = (symbol == "X") ? datosGuardados1.nombre : datosGuardados2.nombre;
-
-
 
             sessionStorage.setItem("titan", winner);
 
