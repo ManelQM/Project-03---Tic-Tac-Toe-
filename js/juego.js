@@ -47,10 +47,9 @@ boxes.map((box) => {
   box.addEventListener("click", () => {
     if ((box.innerHTML == "") && (turn1 > 0) || (turn2 > 0)) {
       box.innerHTML = interruptor ? "X" : "O";
-
       board[box.id] = interruptor ? "X" : "O";
-
-      if(interruptor){
+      
+      if(!interruptor){
 
         turn1--;
 
@@ -61,6 +60,7 @@ boxes.map((box) => {
       }if ((turn1 == 0) && (turn2 == 0)) {
         turn1++;
         turn2++; 
+        sixsybolsonboard()
       }
       checkWinTurn();
       /*switch entre los turnos*/
@@ -76,6 +76,8 @@ boxes.map((box) => {
     }    
   });
 });
+
+const sixsybolsonboard = () => {}
 
 const checkWinTurn= () => {
   if (interruptor == true) {
