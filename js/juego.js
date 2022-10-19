@@ -27,7 +27,7 @@ let boxes = Array.from(document.getElementsByClassName("activebox"));
 
 var turn1 = 3;
 var turn2 = 3;
-var fichas = 6; 
+
 let interruptor = true;
 
 let winnerCombos = [
@@ -54,18 +54,19 @@ boxes.map((box) => {
       if(!interruptor){
 
         turn1--;
-        fichas--;
-        console.log (fichas);
+       
+
 
       }else{
 
         turn2--;
-        fichas --; 
+        
      
       };
       
       checkWinTurn();
-      sixsymbolsonboardp1 ();
+      sixsymbolsonboardp1();
+      sixsymbolsonboardp2();
       /*switch entre los turnos*/
       interruptor = !interruptor;
       /*indicadores de turno durante la partida*/
@@ -92,6 +93,18 @@ const sixsymbolsonboardp1 = () => {
   }
 });
 }) }
+const sixsymbolsonboardp2 = () => {
+  boxes.map((box) => {
+    box.addEventListener("click", () => {
+      if ((box.innerHTML == "O") && (turn2 == 0)) {
+        box.innerHTML = "O" ? "" : "";
+        board[box.id] = "O" ? "" : "";
+        box.innerHTML = "X" ? "" : "";
+        board[box.id] = "X" ? "" : "";
+        turn2++
+  }
+});
+})}
  // UN metodo que controla que tengo como maximo seis fichas 
 // un metodo que me permita desmarcar una ficha de las puestas en el tablero que solo sean las correspondientes al jugador. 
 //Este metodo lo podré en el ELSE. Tiene que permitirme quitar una. Primero tendré que quitar una ficha y luego volverá al estado anterior. 
