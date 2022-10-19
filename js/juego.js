@@ -27,7 +27,7 @@ let boxes = Array.from(document.getElementsByClassName("activebox"));
 
 var turn1 = 3;
 var turn2 = 3;
-// var fichas = 6; if((fichas = 0 && box.innerHTML == "X") || (fichas = 0 && box.innerHTML == "O")){}  fichas --;  fichas--;
+var fichas = 6; 
 let interruptor = true;
 
 let winnerCombos = [
@@ -50,24 +50,22 @@ boxes.map((box) => {
     if ((box.innerHTML == "") && (turn1 > 0) || (box.innerHTML == "") && (turn2 > 0)) {
       box.innerHTML = interruptor ? "X" : "O";
       board[box.id] = interruptor ? "X" : "O";
-      
+     
       if(!interruptor){
 
         turn1--;
-       
+        fichas--;
         console.log (fichas);
 
       }else{
-        
+
         turn2--;
-        
+        fichas --; 
+     
       };
-      // if ((turn1 == 0) && (turn2 == 0)) {
-      //   turn1++;
-      //   turn2++; 
-        
-      // }
+      
       checkWinTurn();
+      sixsybolsonboard ();
       /*switch entre los turnos*/
       interruptor = !interruptor;
       /*indicadores de turno durante la partida*/
@@ -82,11 +80,19 @@ boxes.map((box) => {
   });
 });
 
-const sixsybolsonboardplayer1 = () => {
-  if(  )
-
-  
-} // UN metodo que controla que tengo como maximo seis fichas 
+const sixsybolsonboard = () => {
+ 
+  boxes.map((box) => {
+    box.addEventListener("click", () => {
+      // if (si tengo menos de 6 fichas hare todo esto )
+     
+      if ((box.innerHTML == "X") && (turn2 <= 0) || (box.innerHTML == "O") && (turn2= 0)) {
+        box.innerHTML = interruptor ? "" : "";
+        board[box.id] = interruptor ? "" : "";
+}
+});
+}) }
+ // UN metodo que controla que tengo como maximo seis fichas 
 // un metodo que me permita desmarcar una ficha de las puestas en el tablero que solo sean las correspondientes al jugador. 
 //Este metodo lo podré en el ELSE. Tiene que permitirme quitar una. Primero tendré que quitar una ficha y luego volverá al estado anterior. 
 
