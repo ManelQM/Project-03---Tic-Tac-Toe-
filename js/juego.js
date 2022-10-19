@@ -55,18 +55,15 @@ boxes.map((box) => {
 
         turn1--;
        
-
-
       }else{
 
         turn2--;
         
-     
       };
       
       checkWinTurn();
       sixsymbolsonboardp1();
-      sixsymbolsonboardp2();
+      // sixsymbolsonboardp2();
       /*switch entre los turnos*/
       interruptor = !interruptor;
       /*indicadores de turno durante la partida*/
@@ -93,18 +90,18 @@ const sixsymbolsonboardp1 = () => {
   }
 });
 }) }
-const sixsymbolsonboardp2 = () => {
-  boxes.map((box) => {
-    box.addEventListener("click", () => {
-      if ((box.innerHTML == "O") && (turn2 == 0)) {
-        box.innerHTML = "O" ? "" : "";
-        board[box.id] = "O" ? "" : "";
-        box.innerHTML = "X" ? "" : "";
-        board[box.id] = "X" ? "" : "";
-        turn2++
-  }
-});
-})}
+// const sixsymbolsonboardp2 = () => {
+//   boxes.map((box) => {
+//     box.addEventListener("click", () => {
+//       if ((box.innerHTML == "O") && (turn2 == 0)) {
+//         box.innerHTML = "O" ? "" : "";
+//         board[box.id] = "O" ? "" : "";
+//         box.innerHTML = "X" ? "" : "";
+//         board[box.id] = "X" ? "" : "";
+//         turn2++
+//   }
+// });
+// })}
  // UN metodo que controla que tengo como maximo seis fichas 
 // un metodo que me permita desmarcar una ficha de las puestas en el tablero que solo sean las correspondientes al jugador. 
 //Este metodo lo podré en el ELSE. Tiene que permitirme quitar una. Primero tendré que quitar una ficha y luego volverá al estado anterior. 
