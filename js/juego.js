@@ -20,13 +20,14 @@ nameScreen2.innerHTML = `Player2 : ${data2.nombre}`;
 typeScreen1.innerHTML = `Player1 : ${data1.tipo}`;
 typeScreen2.innerHTML = `Player2 : ${data2.tipo}`;
 
+// Definición del tablero 
 var board = ["", "", "", "", "", "", "", "", ""];
 
 let boxes = Array.from(document.getElementsByClassName("activebox"));
 
 var turn1 = 3;
 var turn2 = 3;
-
+// var fichas = 6; if((fichas = 0 && box.innerHTML == "X") || (fichas = 0 && box.innerHTML == "O")){}  fichas --;  fichas--;
 let interruptor = true;
 
 let winnerCombos = [
@@ -45,23 +46,27 @@ let winnerCombos = [
 y a su vez por la id para poder ser usado en js. Se comprueba si esta vacía la casilla así como si alguien ha ganado*/ 
 boxes.map((box) => {
   box.addEventListener("click", () => {
-    if ((box.innerHTML == "") && (turn1 > 0) || (turn2 > 0)) {
+    // if (si tengo menos de 6 fichas hare todo esto )
+    if ((box.innerHTML == "") && (turn1 > 0) || (box.innerHTML == "") && (turn2 > 0)) {
       box.innerHTML = interruptor ? "X" : "O";
       board[box.id] = interruptor ? "X" : "O";
       
       if(!interruptor){
 
         turn1--;
+       
+        console.log (fichas);
 
       }else{
         
         turn2--;
-
-      }if ((turn1 == 0) && (turn2 == 0)) {
-        turn1++;
-        turn2++; 
-        sixsybolsonboard()
-      }
+        
+      };
+      // if ((turn1 == 0) && (turn2 == 0)) {
+      //   turn1++;
+      //   turn2++; 
+        
+      // }
       checkWinTurn();
       /*switch entre los turnos*/
       interruptor = !interruptor;
@@ -77,7 +82,13 @@ boxes.map((box) => {
   });
 });
 
-const sixsybolsonboard = () => {}
+const sixsybolsonboardplayer1 = () => {
+  if(  )
+
+  
+} // UN metodo que controla que tengo como maximo seis fichas 
+// un metodo que me permita desmarcar una ficha de las puestas en el tablero que solo sean las correspondientes al jugador. 
+//Este metodo lo podré en el ELSE. Tiene que permitirme quitar una. Primero tendré que quitar una ficha y luego volverá al estado anterior. 
 
 const checkWinTurn= () => {
   if (interruptor == true) {
