@@ -65,7 +65,7 @@ boxes.map((box) => {
       };
       
       checkWinTurn();
-      sixsybolsonboard ();
+      sixsymbolsonboardp1 ();
       /*switch entre los turnos*/
       interruptor = !interruptor;
       /*indicadores de turno durante la partida*/
@@ -80,16 +80,16 @@ boxes.map((box) => {
   });
 });
 
-const sixsybolsonboard = () => {
- 
+const sixsymbolsonboardp1 = () => {
   boxes.map((box) => {
     box.addEventListener("click", () => {
-      // if (si tengo menos de 6 fichas hare todo esto )
-     
-      if ((box.innerHTML == "X") && (turn2 <= 0) || (box.innerHTML == "O") && (turn2= 0)) {
-        box.innerHTML = interruptor ? "" : "";
-        board[box.id] = interruptor ? "" : "";
-}
+      if ((box.innerHTML == "X") && (turn1 == 0)) {
+        box.innerHTML = "X" ? "" : "";
+        board[box.id] = "X" ? "" : "";
+        box.innerHTML = "O" ? "" : "";
+        board[box.id] = "O" ? "" : "";
+        turn1++
+  }
 });
 }) }
  // UN metodo que controla que tengo como maximo seis fichas 
