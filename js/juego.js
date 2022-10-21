@@ -145,7 +145,7 @@ const checkWinner = (symbol) => {
 
             sessionStorage.setItem("titan", winner);
 
-            window.open("../pages/winner.html", "_self");
+            window.open("../Pages/winner.html", "_self");
           }, 1000);
         }
       }
