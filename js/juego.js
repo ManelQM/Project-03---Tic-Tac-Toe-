@@ -20,7 +20,7 @@ nameScreen2.innerHTML = `Player2 : ${data2.nombre}`;
 typeScreen1.innerHTML = `Player1 : ${data1.tipo}`;
 typeScreen2.innerHTML = `Player2 : ${data2.tipo}`;
 
-// Definición del tablero 
+// Definición del tablero
 var board = ["", "", "", "", "", "", "", "", ""];
 
 let boxes = Array.from(document.getElementsByClassName("activebox"));
@@ -41,72 +41,74 @@ let winnerCombos = [
   [2, 4, 6],
 ];
 
-
 /* Se realiza un mapeo de todo el tablero[] y procedemos a recoger los eventos sucedidos en el formulario 
-y a su vez por la id para poder ser usado en js. Se comprueba si esta vacía la casilla así como si alguien ha ganado*/ 
+y a su vez por la id para poder ser usado en js. Se comprueba si esta vacía la casilla así como si alguien ha ganado*/
 boxes.map((box) => {
   box.addEventListener("click", () => {
     // if (si tengo menos de 6 fichas hare todo esto )
-    if ((box.innerHTML == "") && (turn1 > 0) || (box.innerHTML == "") && (turn2 > 0)) {
+    if (
+      (box.innerHTML == "" && turn1 > 0) ||
+      (box.innerHTML == "" && turn2 > 0)
+    ) {
       box.innerHTML = interruptor ? "X" : "O";
       board[box.id] = interruptor ? "X" : "O";
-     
-      if(!interruptor){
 
+      if (!interruptor) {
         turn1--;
-       
-      }else{
+        console.log (turn1, "estoy aqui idiota");
 
+      } else {
         turn2--;
-        
-      };
-      
+        console.log (turn2,"estoy aqui");
+      }
+
       checkWinTurn();
       sixsymbolsonboardp1();
-      // sixsymbolsonboardp2();
+      sixsymbolsonboardp2();
       /*switch entre los turnos*/
       interruptor = !interruptor;
       /*indicadores de turno durante la partida*/
-      if(!interruptor){
+      if (!interruptor) {
         turnScreen1.innerHTML = `Next turn`;
-        turnScreen2.innerHTML = `Turn : O`; 
-      }else{
+        turnScreen2.innerHTML = `Turn : O`;
+      } else {
         turnScreen1.innerHTML = `Turn : X`;
         turnScreen2.innerHTML = `Next turn`;
       }
-    }    
+    }
   });
 });
 
 const sixsymbolsonboardp1 = () => {
   boxes.map((box) => {
-    box.addEventListener("click", () => {
-      if ((box.innerHTML == "X") && (turn1 == 0)) {
+    box.addEventListener("click", () => {""
+      if (box.innerHTML == "X" && turn1 == 0) {
         box.innerHTML = "X" ? "" : "";
         board[box.id] = "X" ? "" : "";
         box.innerHTML = "O" ? "" : "";
         board[box.id] = "O" ? "" : "";
-        turn1++
+        turn1++;
+      }
+    });
+  });
+};
+const sixsymbolsonboardp2 = () => {
+  boxes.map((box) => {
+    box.addEventListener("click", () => {
+      if ((box.innerHTML == "O") && (turn2 == 0)) {
+        box.innerHTML = "O" ? "" : "";
+        board[box.id] = "O" ? "" : "";
+        box.innerHTML = "X" ? "" : "";
+        board[box.id] = "X" ? "" : "";
+        turn2++
   }
 });
-}) }
-// const sixsymbolsonboardp2 = () => {
-//   boxes.map((box) => {
-//     box.addEventListener("click", () => {
-//       if ((box.innerHTML == "O") && (turn2 == 0)) {
-//         box.innerHTML = "O" ? "" : "";
-//         board[box.id] = "O" ? "" : "";
-//         box.innerHTML = "X" ? "" : "";
-//         board[box.id] = "X" ? "" : "";
-//         turn2++
-//   }
-// });
-// })}
- // UN metodo que controla que tengo como maximo seis fichas 
-// un metodo que me permita desmarcar una ficha de las puestas en el tablero que solo sean las correspondientes al jugador. 
-//Este metodo lo podré en el ELSE. Tiene que permitirme quitar una. Primero tendré que quitar una ficha y luego volverá al estado anterior. 
+})}
+// UN metodo que controla que tengo como maximo seis fichas
+// un metodo que me permita desmarcar una ficha de las puestas en el tablero que solo sean las correspondientes al jugador.
+//Este metodo lo podré en el ELSE. Tiene que permitirme quitar una. Primero tendré que quitar una ficha y luego volverá al estado anterior.
 
-const checkWinTurn= () => {
+const checkWinTurn = () => {
   if (interruptor == true) {
     checkWinner("X");
   } else {
@@ -119,18 +121,16 @@ const checkWinner = (symbol) => {
   let contador = 0;
 
   for (let numerador = 0; numerador < winnerCombos.length; numerador++) {
-
     for (
       let iterador = 0;
       iterador < winnerCombos[numerador].length;
       iterador++
     ) {
-        /*Comparación de tableros*/
+      /*Comparación de tableros*/
       if (board[winnerCombos[numerador][iterador]] == symbol) {
         contador++;
 
         if (contador == 3) {
-
           setTimeout(() => {
             let datosGuardados1 = JSON.parse(
               sessionStorage.getItem("dataPlayer1")
@@ -140,7 +140,8 @@ const checkWinner = (symbol) => {
               sessionStorage.getItem("dataPlayer2")
             );
 
-            let winner = (symbol == "X") ? datosGuardados1.nombre : datosGuardados2.nombre;
+            let winner =
+              symbol == "X" ? datosGuardados1.nombre : datosGuardados2.nombre;
 
             sessionStorage.setItem("titan", winner);
 
