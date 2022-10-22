@@ -47,19 +47,17 @@ boxes.map((box) => {
   box.addEventListener("click", () => {
     // if (si tengo menos de 6 fichas hare todo esto )
     if (
-      (box.innerHTML == "" && turn1 > 0) ||
-      (box.innerHTML == "" && turn2 > 0)
+      (box.innerHTML == "" && turn1 > 0) || (box.innerHTML == "" && turn2 > 0)
     ) {
       box.innerHTML = interruptor ? "X" : "O";
       board[box.id] = interruptor ? "X" : "O";
 
       if (!interruptor) {
         turn1--;
-        console.log (turn1, "estoy aqui idiota");
-
+        console.log (turn1);
       } else {
         turn2--;
-        console.log (turn2,"estoy aqui");
+        console.log (turn2);
       }
 
       checkWinTurn();
@@ -69,11 +67,11 @@ boxes.map((box) => {
       interruptor = !interruptor;
       /*indicadores de turno durante la partida*/
       if (!interruptor) {
-        turnScreen1.innerHTML = `Next turn`;
+        turnScreen1.innerHTML = `Next`;
         turnScreen2.innerHTML = `Turn : O`;
       } else {
         turnScreen1.innerHTML = `Turn : X`;
-        turnScreen2.innerHTML = `Next turn`;
+        turnScreen2.innerHTML = `Next`;
       }
     }
   });
