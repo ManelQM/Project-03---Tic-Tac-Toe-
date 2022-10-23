@@ -49,22 +49,19 @@ boxes.map((box) => {
     if (
       (box.innerHTML == "" && turn1 > 0) || (box.innerHTML == "" && turn2 > 0) 
     ) {
+   
       box.innerHTML = interruptor ? "X" : "O";
       board[box.id] = interruptor ? "X" : "O";
 
-      if (!interruptor) {
+      if (interruptor) {
         turn1--;
         console.log (turn1);
       } else {
-        
         turn2--;
-        console.log (turn2);
       }
 
       checkWinTurn();
-      sixsymbolsonboardp1();
-      sixsymbolsonboardp2();
-      
+
       /*switch entre los turnos*/
       interruptor = !interruptor;
       /*indicadores de turno durante la partida*/
@@ -75,40 +72,34 @@ boxes.map((box) => {
         turnScreen1.innerHTML = `Turn : X`;
         turnScreen2.innerHTML = `Next`;
       }
+    } else { 
+      sixSymbolsOnBoard(interruptor,box);
+    
     }
   });
 });
 
-const sixsymbolsonboardp1 = () => {
-  boxes.map((box) => {
-    box.addEventListener("click", () => {
-      if (box.innerHTML == "X" && turn1 == 0) {
-        box.innerHTML = "X" ? "" : "";
-        board[box.id] = "X" ? "" : "";
-        box.innerHTML = "O" ? "" : "";
-        board[box.id] = "O" ? "" : "";
-        turn1++;  
-      } 
-    })
-  })
-};
-const sixsymbolsonboardp2 = (turn2) => {
-  boxes.map((box) => {
-    box.addEventListener("click", () => {
-      if ((box.innerHTML == "O" && turn2 == 0)) {
-        box.innerHTML = "O" ? "" : "";
-        board[box.id] = "O" ? "" : ""; 
-        box.innerHTML = "X" ? "" : "";
-        board[box.id] = "X" ? "" : "";
-        turn2++;  
-      }      
-     })
-  })
-};
-
 // UN metodo que controla que tengo como maximo seis fichas
 // un metodo que me permita desmarcar una ficha de las puestas en el tablero que solo sean las correspondientes al jugador.
 //Este metodo lo podré en el ELSE. Tiene que permitirme quitar una. Primero tendré que quitar una ficha y luego volverá al estado anterior.
+
+const sixSymbolsOnBoard = (turnparameter,boxparameter) => {
+  if((turnparameter == true) && (boxparameter.innerHTML == "X")){
+
+    boxparameter.innerHTML = "";
+    board[boxparameter.id] = "";
+
+    turn1++;
+
+  } else if ((turnparameter == false) && (boxparameter.innerHTML == "O")){
+    boxparameter.innerHTML = "";
+    board[boxparameter.id] = "";
+
+    turn2++;
+  };
+
+};
+
 
 const checkWinTurn = () => {
   if (interruptor == true) {
